@@ -70,6 +70,15 @@ namespace Calculator
                 }
                 Console.WriteLine($"Your numbers divided by each other is equal to {divideTotal}.");
             }
+            else if (splitOperator[0] == "avg")
+            {
+                foreach (var num in splitNums)
+                {
+                    int stringToInt = Int32.Parse(num);
+                    sum += stringToInt;
+                }
+                Console.WriteLine($"The average of your numbers is {sum / splitNums.Length}");
+            }
         }
     }
 }
